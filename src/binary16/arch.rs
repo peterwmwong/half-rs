@@ -118,7 +118,7 @@ pub(crate) fn f16_to_f64(i: u16) -> f64 {
 }
 
 #[inline]
-pub(crate) fn f32x4_to_f16x4(f: &[f32; 4]) -> [u16; 4] {
+pub fn f32x4_to_f16x4(f: &[f32; 4]) -> [u16; 4] {
     convert_fn! {
         if x86_feature("f16c") {
             unsafe { x86::f32x4_to_f16x4_x86_f16c(f) }

@@ -207,7 +207,7 @@ pub mod slice;
 pub mod vec;
 
 pub use bfloat::bf16;
-pub use binary16::f16;
+pub use binary16::{arch::f32x4_to_f16x4, f16};
 
 /// A collection of the most used items and traits in this crate for easy importing.
 ///
