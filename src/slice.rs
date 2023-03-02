@@ -318,6 +318,7 @@ impl HalfFloatSliceExt for [f16] {
         unsafe { slice::from_raw_parts_mut(pointer, length) }
     }
 
+    #[inline]
     fn convert_from_f32_slice(&mut self, src: &[f32]) {
         assert_eq!(
             self.len(),
@@ -404,6 +405,7 @@ impl HalfFloatSliceExt for [bf16] {
         unsafe { slice::from_raw_parts_mut(pointer, length) }
     }
 
+    #[inline]
     fn convert_from_f32_slice(&mut self, src: &[f32]) {
         assert_eq!(
             self.len(),
